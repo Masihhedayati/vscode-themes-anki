@@ -46,7 +46,7 @@ Transform your Anki experience with popular VS Code themes! This addon brings th
 4. Restart Anki
 
 ### Method 2: Manual Installation
-1. Download the latest release from [GitHub Releases](https://github.com/yourusername/vscode-themes-anki/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/Masihhedayati/vscode-themes-anki/releases)
 2. Extract the files to your Anki addons directory:
    - **Windows**: `%APPDATA%\Anki2\addons21\vscode_themes_anki`
    - **Mac**: `~/Library/Application Support/Anki2/addons21/vscode_themes_anki`
@@ -135,8 +135,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/vscode-themes-anki/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/vscode-themes-anki/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Masihhedayati/vscode-themes-anki/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Masihhedayati/vscode-themes-anki/discussions)
 - **Anki Forums**: [AnkiWeb Support](https://forums.ankiweb.net)
 
 ---

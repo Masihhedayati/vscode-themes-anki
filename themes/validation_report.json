@@ -1,0 +1,377 @@
+[
+  {
+    "name": "atom_one_dark.json",
+    "theme_display_name": "OneDark",
+    "type": "unknown",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['sideBar.foreground']"
+    ],
+    "fixed": false,
+    "colors_count": 74,
+    "token_colors_count": 211
+  },
+  {
+    "name": "atom_one_light.json",
+    "theme_display_name": "OneLight",
+    "type": "unknown",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['sideBar.foreground']"
+    ],
+    "fixed": false,
+    "colors_count": 74,
+    "token_colors_count": 211
+  },
+  {
+    "name": "ayu_dark.json",
+    "theme_display_name": "Ayu Dark",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']"
+    ],
+    "fixed": false,
+    "colors_count": 31,
+    "token_colors_count": 10
+  },
+  {
+    "name": "catppuccin_frappe.json",
+    "theme_display_name": "Catppuccin Frappé",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 558,
+    "token_colors_count": 177
+  },
+  {
+    "name": "catppuccin_latte.json",
+    "theme_display_name": "Catppuccin Latte",
+    "type": "light",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 558,
+    "token_colors_count": 177
+  },
+  {
+    "name": "catppuccin_macchiato.json",
+    "theme_display_name": "Catppuccin Macchiato",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 558,
+    "token_colors_count": 177
+  },
+  {
+    "name": "catppuccin_mocha.json",
+    "theme_display_name": "Catppuccin Mocha",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 558,
+    "token_colors_count": 177
+  },
+  {
+    "name": "cobalt2_cobalt2.json",
+    "theme_display_name": "Cobalt",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['menu.selectionForeground: #fff', 'activityBar.foreground: #fff', 'activityBarBadge.foreground: #000', 'badge.foreground: #000', 'button.foreground: #fff']"
+    ],
+    "fixed": false,
+    "colors_count": 227,
+    "token_colors_count": 76
+  },
+  {
+    "name": "dark_vs.json",
+    "theme_display_name": "Dark (Visual Studio)",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['sideBar.background', 'sideBar.foreground', 'activityBar.background', 'activityBar.foreground', 'statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']",
+      "Invalid color formats: ['statusBarItem.remoteForeground: #FFF', 'sideBarSectionHeader.background: #0000', 'sideBarSectionHeader.border: #ccc3', 'tab.lastPinnedBorder: #ccc3', 'list.activeSelectionIconForeground: #FFF']",
+      "Auto-fixed: Fixed and saved (backup: dark_vs.json.backup)"
+    ],
+    "fixed": true,
+    "colors_count": 31,
+    "token_colors_count": 50
+  },
+  {
+    "name": "dracula.json",
+    "theme_display_name": "Dracula",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']"
+    ],
+    "fixed": false,
+    "colors_count": 40,
+    "token_colors_count": 19
+  },
+  {
+    "name": "edge_dark.json",
+    "theme_display_name": "Edge Dark",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 306,
+    "token_colors_count": 212
+  },
+  {
+    "name": "edge_light.json",
+    "theme_display_name": "Edge Light",
+    "type": "light",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 306,
+    "token_colors_count": 212
+  },
+  {
+    "name": "github_dark.json",
+    "theme_display_name": "GitHub Dark",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']"
+    ],
+    "fixed": false,
+    "colors_count": 31,
+    "token_colors_count": 10
+  },
+  {
+    "name": "high_contrast.json",
+    "theme_display_name": "Dark High Contrast",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['sideBar.background', 'sideBar.foreground', 'activityBar.background', 'activityBar.foreground', 'statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']",
+      "Auto-fixed: Fixed and saved (backup: high_contrast.json.backup)"
+    ],
+    "fixed": true,
+    "colors_count": 13,
+    "token_colors_count": 54
+  },
+  {
+    "name": "high_contrast_light.json",
+    "theme_display_name": "Light High Contrast",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['sideBar.background', 'sideBar.foreground', 'activityBar.background', 'activityBar.foreground', 'statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']",
+      "Auto-fixed: Fixed and saved (backup: high_contrast_light.json.backup)"
+    ],
+    "fixed": true,
+    "colors_count": 8,
+    "token_colors_count": 68
+  },
+  {
+    "name": "light_vs.json",
+    "theme_display_name": "Light (Visual Studio)",
+    "type": "light",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['sideBar.background', 'sideBar.foreground', 'activityBar.background', 'activityBar.foreground', 'statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']",
+      "Invalid color formats: ['statusBarItem.remoteForeground: #FFF', 'sideBarSectionHeader.background: #0000', 'list.activeSelectionIconForeground: #FFF']",
+      "Auto-fixed: Fixed and saved (backup: light_vs.json.backup)"
+    ],
+    "fixed": true,
+    "colors_count": 36,
+    "token_colors_count": 49
+  },
+  {
+    "name": "monokai_pro.json",
+    "theme_display_name": "Monokai Pro",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']"
+    ],
+    "fixed": false,
+    "colors_count": 31,
+    "token_colors_count": 10
+  },
+  {
+    "name": "night_owl_Night_Owl.json",
+    "theme_display_name": "Night Owl",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['editorInlayHint.background: #0000']",
+      "Token color 3 missing 'scope' field"
+    ],
+    "fixed": false,
+    "colors_count": 206,
+    "token_colors_count": 196
+  },
+  {
+    "name": "noctis.json",
+    "theme_display_name": "Noctis",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['button.background: #099', 'button.hoverBackground: #0cc', 'extensionButton.prominentBackground: #099', 'extensionButton.prominentHoverBackground: #0cc', 'settings.dropdownForeground: #0cc']"
+    ],
+    "fixed": false,
+    "colors_count": 276,
+    "token_colors_count": 19
+  },
+  {
+    "name": "one_dark_pro.json",
+    "theme_display_name": "One Dark Pro",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "fixed": false,
+    "colors_count": 143,
+    "token_colors_count": 275
+  },
+  {
+    "name": "one_dark_pro_OneDark-Pro-darker.json",
+    "theme_display_name": "One Dark Pro",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['settings.headerForeground: #fff']"
+    ],
+    "fixed": false,
+    "colors_count": 143,
+    "token_colors_count": 272
+  },
+  {
+    "name": "one_dark_pro_OneDark-Pro-flat.json",
+    "theme_display_name": "One Dark Pro",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['settings.headerForeground: #fff', 'statusBar.debuggingForeground: #fff', 'statusBarItem.remoteForeground: #fff']"
+    ],
+    "fixed": false,
+    "colors_count": 168,
+    "token_colors_count": 277
+  },
+  {
+    "name": "one_dark_pro_OneDark-Pro.json",
+    "theme_display_name": "One Dark Pro",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['settings.headerForeground: #fff']"
+    ],
+    "fixed": false,
+    "colors_count": 143,
+    "token_colors_count": 275
+  },
+  {
+    "name": "palenight.json",
+    "theme_display_name": "Palenight Theme",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Invalid color formats: ['editor.lineHighlightBackground: #0003']",
+      "Token color 0 missing 'scope' field"
+    ],
+    "fixed": false,
+    "colors_count": 201,
+    "token_colors_count": 165
+  },
+  {
+    "name": "solarized_dark.json",
+    "theme_display_name": "Solarized Dark",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']"
+    ],
+    "fixed": false,
+    "colors_count": 39,
+    "token_colors_count": 10
+  },
+  {
+    "name": "synthwave_84_synthwave.json",
+    "theme_display_name": "SynthWave 84",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['tab.activeBackground', 'tab.activeForeground']",
+      "Auto-fixed: Fixed and saved (backup: synthwave_84_synthwave.json.backup)"
+    ],
+    "fixed": true,
+    "colors_count": 140,
+    "token_colors_count": 88
+  },
+  {
+    "name": "tokyo_night.json",
+    "theme_display_name": "Tokyo Night",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']"
+    ],
+    "fixed": false,
+    "colors_count": 31,
+    "token_colors_count": 10
+  },
+  {
+    "name": "winter_is_coming_WinterIsComing-dark-blue.json",
+    "theme_display_name": "Winter Is Coming",
+    "type": "dark",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['statusBar.foreground']",
+      "Token color 0 missing 'scope' field"
+    ],
+    "fixed": false,
+    "colors_count": 133,
+    "token_colors_count": 66
+  },
+  {
+    "name": "winter_is_coming_WinterIsComing-light.json",
+    "theme_display_name": "Winter is Coming",
+    "type": "light",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Missing recommended colors: ['activityBar.background', 'statusBar.foreground', 'tab.activeBackground', 'tab.activeForeground']",
+      "Invalid color formats: ['contrastActiveBorder: #ccc', 'contrastBorder: #ccc', 'debugToolBar.background: #fff', 'editorGroupHeader.tabsBackground: #fff', 'editorGutter.background: #fff']",
+      "Token color 0 missing 'scope' field"
+    ],
+    "fixed": false,
+    "colors_count": 122,
+    "token_colors_count": 66
+  }
+]

@@ -26,12 +26,10 @@ class ThemeDialog(QDialog):
         theme_layout = QVBoxLayout()
         theme_group.setLayout(theme_layout)
         
-        # Theme list
         self.theme_list = QListWidget()
         self.theme_list.itemClicked.connect(self.on_theme_selected)
         theme_layout.addWidget(self.theme_list)
         
-        # Theme preview
         self.preview_text = QTextEdit()
         self.preview_text.setReadOnly(True)
         self.preview_text.setMaximumHeight(150)
@@ -84,6 +82,12 @@ const result = numbers.map(n => n * 2);""")
         self.import_button.clicked.connect(self.import_theme)
         button_layout.addWidget(self.import_button)
         
+        # Add debug button
+        self.debug_button = QPushButton("Debug Reviewer")
+        self.debug_button.clicked.connect(self.debug_reviewer)
+        self.debug_button.setToolTip("Analyze reviewer theming issues (check console for output)")
+        button_layout.addWidget(self.debug_button)
+        
         button_layout.addStretch()
         
         self.apply_button = QPushButton("Apply")
@@ -98,7 +102,6 @@ const result = numbers.map(n => n * 2);""")
         
     def load_current_settings(self):
         """Load current settings into the dialog"""
-        # Populate theme list
         themes = self.theme_manager.get_available_themes()
         current_theme = self.theme_manager.config.get("current_theme", "")
         
@@ -111,21 +114,10 @@ const result = numbers.map(n => n * 2);""")
                 self.theme_list.setCurrentItem(item)
                 self.update_preview(theme_id)
         
-        # Load checkboxes
-        self.apply_to_cards_cb.setChecked(
-            self.theme_manager.config.get("apply_to_cards", True)
-        )
-        self.apply_to_ui_cb.setChecked(
-            self.theme_manager.config.get("apply_to_ui", True)
-        )
-        self.use_custom_titlebar_cb.setChecked(
-            self.theme_manager.config.get("use_custom_titlebar", False)
-        )
-        
-        # Load custom CSS
-        self.custom_css_text.setPlainText(
-            self.theme_manager.config.get("custom_css", "")
-        )
+        self.apply_to_cards_cb.setChecked(self.theme_manager.config.get("apply_to_cards", True))
+        self.apply_to_ui_cb.setChecked(self.theme_manager.config.get("apply_to_ui", True))
+        self.use_custom_titlebar_cb.setChecked(self.theme_manager.config.get("use_custom_titlebar", False))
+        self.custom_css_text.setPlainText(self.theme_manager.config.get("custom_css", ""))
     
     def on_theme_selected(self, item):
         """Handle theme selection"""
@@ -139,12 +131,9 @@ const result = numbers.map(n => n * 2);""")
             return
         
         colors = theme.get("colors", {})
-        
-        # Apply basic colors to preview
         bg_color = colors.get('editor.background', '#282c34')
         fg_color = colors.get('editor.foreground', '#abb2bf')
         
-        # Create a simple preview style
         preview_style = f"""
         QTextEdit {{
             background-color: {bg_color};
@@ -154,17 +143,14 @@ const result = numbers.map(n => n * 2);""")
             padding: 10px;
         }}
         """
-        
         self.preview_text.setStyleSheet(preview_style)
     
     def apply_settings(self):
         """Apply the selected settings"""
-        # Get selected theme
         current_item = self.theme_list.currentItem()
         if current_item:
             theme_id = current_item.data(Qt.ItemDataRole.UserRole)
             
-            # Update configuration
             new_config = {
                 "current_theme": theme_id,
                 "apply_to_cards": self.apply_to_cards_cb.isChecked(),
@@ -173,18 +159,30 @@ const result = numbers.map(n => n * 2);""")
                 "custom_css": self.custom_css_text.toPlainText()
             }
             
-            self.theme_manager.update_config(new_config)
-            
-            # Show success message
-            if self.apply_to_ui_cb.isChecked():
-                tooltip("Theme applied! Please restart Anki for UI changes to take full effect.")
-            else:
-                tooltip("Theme applied!")
-            
-            self.accept()
+            try:
+                self.theme_manager.update_config(new_config)
+                
+                if self.apply_to_ui_cb.isChecked():
+                    tooltip("Theme applied! Please restart Anki for UI changes to take full effect.")
+                else:
+                    tooltip("Theme applied!")
+                
+                self.accept()
+            except Exception as e:
+                showInfo(f"Failed to apply theme: {e}")
         else:
             showInfo("Please select a theme.")
     
+    def debug_reviewer(self):
+        """Trigger reviewer debugging analysis"""
+        print("🔍 USER TRIGGERED REVIEWER DEBUG")
+        try:
+            self.theme_manager.debug_reviewer_context()
+            tooltip("Debug analysis completed - check console output")
+        except Exception as e:
+            print(f"❌ Debug failed: {e}")
+            showInfo(f"Debug failed: {e}")
+
     def import_theme(self):
         """Import a VS Code theme from a JSON file"""
         file_path, _ = QFileDialog.getOpenFileName(
@@ -199,15 +197,12 @@ const result = numbers.map(n => n * 2);""")
                 with open(file_path, 'r') as f:
                     theme_data = json.load(f)
                 
-                # Validate theme structure
                 if "colors" not in theme_data:
                     showInfo("Invalid theme file: missing 'colors' section")
                     return
                 
-                # Get theme name
                 theme_name = theme_data.get("name", "Imported Theme")
                 
-                # Save theme
                 import os
                 theme_id = os.path.basename(file_path)[:-5].lower().replace(" ", "_")
                 theme_path = os.path.join(self.theme_manager.themes_dir, f"{theme_id}.json")
@@ -215,10 +210,8 @@ const result = numbers.map(n => n * 2);""")
                 with open(theme_path, 'w') as f:
                     json.dump(theme_data, f, indent=2)
                 
-                # Reload themes
                 self.theme_manager.load_themes()
                 
-                # Refresh theme list
                 self.theme_list.clear()
                 self.load_current_settings()
                 

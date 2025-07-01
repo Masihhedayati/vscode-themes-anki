@@ -5,6 +5,78 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-01-02
+
+### Fixed
+- **🎯 CRITICAL: Card Content Theming Issue RESOLVED**: Fixed overly aggressive CSS protection that was preventing card backgrounds from being themed
+  - **Root Cause**: CSS protection was excluding entire `#qa`, `#middle`, and `.card` containers from theming
+  - **Solution**: Refined CSS protection to only preserve actual text content while allowing container theming
+  - Card backgrounds now properly use VS Code theme colors (e.g., dark background for dark themes)
+  - Medical content and study materials now display on properly themed backgrounds
+
+- **📐 Bottom Bar Spacing Improved**: Increased bottom button bar padding from cramped 8px to spacious 16px vertical, 20px horizontal
+  - Better visual breathing room for review buttons (Again, Hard, Good, Easy)
+  - Improved button margins (4px 8px) and padding (8px 16px) for better click targets
+  - Enhanced overall review experience with less cramped interface
+
+- **⚔️ Addon Conflict Management System**: Comprehensive solution for addon conflicts affecting theme consistency
+  - **Automatic Detection**: Identifies conflicting addons by AnkiWeb ID including "The KING of Button Add-ons" (374005964)
+  - **Smart Resolution**: User-controlled disabling of conflicting addons with consent dialogs
+  - **Nuclear CSS System**: Ultra-high specificity CSS (1,0,0,12+) for override wars
+  - **Multi-Method Injection**: CSS applied via webview, Qt stylesheets, DOM manipulation with fallbacks
+
+### Added
+- **🔧 Emergency Diagnostic Tools**: Comprehensive diagnostic and fix scripts for theme consistency issues
+  - `emergency_diagnostic_and_fix.py` - Complete theme system analysis and repair
+  - `addon_conflict_manager.py` - Professional conflict detection and resolution system
+  - `theme_diagnostic.py` variants - Multiple diagnostic approaches for different scenarios
+
+- **🎨 Enhanced CSS Architecture**: Improved theme application with better context awareness
+  - CSS Variables integration for consistent theming across all interface elements
+  - Refined reviewer-specific CSS with proper card content handling
+  - Better button styling with hover states and focus indicators
+  - Improved scrollbar theming for consistent visual experience
+
+- **🛠️ Developer Controls**: Manual control scripts for testing and debugging
+  - `test_addon_conflicts.py` - User-friendly testing interface for conflict detection
+  - Theme manager debug functions for real-time CSS inspection
+  - Force refresh capabilities for immediate theme reapplication
+
+### Changed
+- **📋 CSS Protection Strategy**: Complete overhaul of card content protection approach
+  - **Before**: Broad exclusion of entire card containers from theming
+  - **After**: Surgical protection of only actual text content, allowing container theming
+  - Card medical content, study materials, and flashcard content now properly themed
+
+- **🎯 Context-Aware CSS Injection**: Enhanced reviewer context handling
+  - Different CSS strategies for interface vs. card content
+  - Proper timing for reviewer-specific CSS application
+  - Better compatibility with Anki 2.1.55+ architectural changes
+
+### Technical Improvements
+- **🔬 Root Cause Analysis**: Systematic debugging approach identified exact CSS conflicts
+  - Anki 2.1.55+ force-applied Qt stylesheets creating override challenges
+  - Addon competition for CSS control (particularly with button styling addons)
+  - Timing issues with reviewer webview CSS injection
+
+- **💪 Robustness Enhancements**: Multiple fallback systems for maximum reliability
+  - Multi-method CSS injection (webview, Qt, DOM) ensures theme application success
+  - Real-time conflict monitoring every 30 seconds for persistent issues
+  - Comprehensive error handling with detailed logging for troubleshooting
+
+- **⚡ Performance Optimizations**: CSS caching and efficient application strategies
+  - Reduced redundant CSS generation through improved caching system
+  - Context-specific CSS generation reduces unnecessary processing
+  - Emergency fixes available for immediate user relief
+
+### Known Resolved Issues
+- ✅ Interface elements not matching selected VS Code theme colors
+- ✅ Buttons and UI components showing default Anki styling instead of theme
+- ✅ Card content areas remaining unthemed despite interface theming working
+- ✅ Bottom button bar appearing cramped with insufficient padding
+- ✅ Conflicts with "The KING of Button Add-ons" and similar styling addons
+- ✅ Theme consistency issues after Anki 2.1.55+ updates
+
 ## [1.2.0] - 2025-01-01
 
 ### Added

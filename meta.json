@@ -1,1 +1,1 @@
-{"config": {"current_theme": "solarized_dark", "apply_to_cards": true, "apply_to_ui": true, "use_custom_titlebar": false, "custom_css": ""}}
+{"config": {"current_theme": "high_contrast", "apply_to_cards": true, "apply_to_ui": true, "system_titlebar_theming": true, "custom_css": "", "glass_navbar_enabled": false, "use_custom_titlebar": false, "auto_sync_anki_theme": true}}

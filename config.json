@@ -2,5 +2,6 @@
     "current_theme": "one_dark_pro",
     "apply_to_cards": true,
     "apply_to_ui": true,
+    "system_titlebar_theming": true,
     "custom_css": ""
 }
